@@ -1,0 +1,150 @@
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 15px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  font-family: Arial, sans-serif;
+}
+
+.weather-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 30px;
+  border-radius: 20px;
+  background: white;
+  text-align: center;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.2);
+}
+
+.weather-container h1 {
+  color: #333;
+}
+
+.subtitle {
+  color: #777;
+  margin: 12px 0 25px;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.search-box input {
+  flex: 1;
+  min-width: 0;
+  padding: 13px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+}
+
+.search-box input:focus {
+  border-color: #667eea;
+}
+
+.search-box button {
+  padding: 13px 20px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.search-box button:hover {
+  background: #5266d5;
+}
+
+.weather-card {
+  margin-top: 20px;
+}
+
+.weather-card h2 {
+  color: #333;
+}
+
+.weather-card img {
+  width: 110px;
+  height: 110px;
+}
+
+.temperature {
+  font-size: 48px;
+  margin: 5px;
+  color: #333;
+}
+
+.description {
+  text-transform: capitalize;
+  color: #666;
+  font-size: 18px;
+}
+
+.weather-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.detail {
+  padding: 20px 10px;
+  border-radius: 12px;
+  background: #f0f2ff;
+}
+
+.detail h3 {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.detail p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.loader {
+  margin: 30px;
+  color: #555;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  border: 5px solid #ddd;
+  border-top: 5px solid #667eea;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.error {
+  color: #e53935;
+  font-weight: bold;
+  margin: 20px;
+}
+
+@media (max-width: 400px) {
+  .weather-container {
+    padding: 20px 12px;
+  }
+
+  .search-box button {
+    padding: 12px;
+  }
+}
